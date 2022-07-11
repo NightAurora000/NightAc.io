@@ -91,5 +91,5 @@
 			breakpoints.on('>large', function() {
 				$intro.prependTo($sidebar);
 			});
-
+	
 })(jQuery);
