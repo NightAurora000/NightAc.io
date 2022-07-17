@@ -204,8 +204,8 @@ input, select, textarea {
 			}
 
 	strong, b {
-    color: #3c3b3b;
-    font-weight: 700;
+	color: #3c3b3b;
+	font-weight: 700;
 	}
 
 	em, i {
@@ -1822,15 +1822,65 @@ input, select, textarea {
 		}
 
 		.author img {
-			border-radius: 100%;
-			display: block;
-			width: 4em;
+	border-radius: 100%;
+	display: block;
+	width: 5em;
 		}
 
 		.author:hover .name {
     border-bottom-color: transparent;
     font-size: 0px;
 		}
+
+/*Author2*/
+
+	.author2 {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: row;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		-moz-justify-content: -moz-flex-end;
+		-webkit-justify-content: -webkit-flex-end;
+		-ms-justify-content: -ms-flex-end;
+		justify-content: flex-end;
+		border-bottom: 0;
+		font-family: "Raleway", Helvetica, sans-serif;
+		font-size: 1em;
+		font-weight: 400;
+		letter-spacing: 0.25em;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+
+		.author2 .name2 {
+    -moz-transition: border-bottom-color 0.2s ease;
+    -webkit-transition: border-bottom-color 0.2s ease;
+    -ms-transition: border-bottom-color 0.2s ease;
+    transition: border-bottom-color 0.2s ease;
+    border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
+    display: block;
+    margin: 0 2em 0 0;
+		}
+
+		.author2 img {
+	border-radius: 100%;
+	display: block;
+	width: 7em;
+		}
+
+		.author2:hover .name2 {
+	border-bottom-color: transparent;
+	font-size: 0px;
+		}
+
 
 /* Blurb */
 
@@ -2786,11 +2836,11 @@ input, select, textarea {
 				}
 
 			.post > header .meta {
-				padding: 3.75em 3em 1.75em 3em ;
-				border-left: solid 1px rgba(160, 160, 160, 0.3);
-				min-width: 17em;
-				text-align: right;
-				width: 17em;
+	padding: 3.75em 3em 1.75em 3em;
+	border-left: solid 1px rgba(160, 160, 160, 0.3);
+	min-width: 17em;
+	text-align: right;
+	/* [disabled]width: 17em; */
 			}
 
 				.post > header .meta > * {
