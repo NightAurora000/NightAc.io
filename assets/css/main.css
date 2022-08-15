@@ -1940,7 +1940,7 @@ input, select, textarea {
     display: inline-block;
     font-family: "Raleway", Helvetica, sans-serif;
     font-size: 0.6em;
-    font-weight: 800;
+    font-weight: normal;
     height: 4.8125em;
     letter-spacing: 0.25em;
     line-height: 4.8125em;
@@ -2005,6 +2005,7 @@ input, select, textarea {
 		button.fit,
 		.button.fit {
 			width: 100%;
+			font-weight: 800;
 		}
 
 		input[type="submit"].large,
@@ -2014,6 +2015,7 @@ input, select, textarea {
 		.button.large {
 			font-size: 0.7em;
 			padding: 0 3em;
+			font-weight: 800;/*-------------------*/
 		}
 
 		input[type="submit"].small,
@@ -2022,6 +2024,7 @@ input, select, textarea {
 		button.small,
 		.button.small {
 			font-size: 0.5em;
+			font-weight: 800;
 		}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
