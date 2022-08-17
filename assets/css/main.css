@@ -113,7 +113,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #f4f4f4;
+		background: linear-gradient(to bottom right, #C9D6FF, #E2E2E2);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2393,8 +2393,8 @@ input, select, textarea {
 
 		.image.featured {
 			display: block;
-			margin: 0 0 3em 0;
-			width: 100%;
+			margin: 0 0 1em 0;
+			width: 10em 100%;
 		}
 
 			.image.featured img {
@@ -2727,7 +2727,7 @@ input, select, textarea {
 
 		.mini-post header {
 			padding: 1.25em 4.25em 0.1em 1.25em ;
-			min-height: 4em;
+			min-height: 3em;
 			position: relative;
 			-moz-flex-grow: 1;
 			-webkit-flex-grow: 1;
@@ -3486,6 +3486,7 @@ input, select, textarea {
 		overflow: hidden;
 		position: relative;
 		width: 4em;
+		clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 	}
 
 		#intro .logo:before {
@@ -3506,6 +3507,7 @@ input, select, textarea {
 			display: block;
 			margin-left: -0.25em;
 			width: 4.5em;
+
 		}
 
 	#intro header h2 {
