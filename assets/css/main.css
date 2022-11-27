@@ -1,12 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900");
 
-/*
-	Future Imperfect by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -3174,7 +3168,7 @@ input, select, textarea {
 				border-top: 0;
 			}
 
-/* Header */
+/* Header */		/*顶上header栏，顶头框*/
 
 	body {
 		padding-top: 3.5em;
@@ -3189,7 +3183,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #ffffff;
+		background-color: #FFFFFF;
 		border-bottom: solid 1px rgba(160, 160, 160, 0.3);
 		height: 3.5em;
 		left: 0;
