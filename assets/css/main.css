@@ -112,7 +112,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: linear-gradient(145deg, #ef3b36, #f2f2f2);
+		background: linear-gradient(145deg, #4ca2cd, #67B26F);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3188,7 +3188,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #FFFFFF;
+		background-color: #ffffff;
 		border-bottom: solid 1px rgba(160, 160, 160, 0.3);
 		height: 3.5em;
 		left: 0;
