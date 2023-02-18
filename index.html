@@ -245,6 +245,13 @@
                                   hour = date.getHours();
                                   min = date.getMinutes();
                                   document.getElementById("current_hm").innerHTML = hour + ":" + min;
+                                  $(function () {
+                                      setInterval(function () {
+                                          $(".class_name").load(location.href + " .class_name");
+                                      }, 100);
+                                  })
+
+
                                 </script>
 								
 								<ul class="posts">
