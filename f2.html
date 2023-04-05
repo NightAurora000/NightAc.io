@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>unity开发中问题的记录及解决方法 Part1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Night Aurora</a></h1>
+						<nav class="links">
+							<a href="javascript:window.scrollTo( 0, 0 );" class="fa fa-angle-double-up"></a>
+							<!--
+							<ul>
+								<li><a href="#">Lorem</a></li>
+								<li><a href="#">Ipsum</a></li>
+							</ul>
+							-->
+						</nav>
+						<nav class="main">
+							<ul>
+								<!--
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								--><!--搜索内容-->
+
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<!--
+						    <section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+							-->
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="index.html">
+											<img src="images/0011.png" alt="" width="60" height="60" >
+											<h3>Blogs 主站</h3>
+											<p>#更多功能正在完善，敬请期待#</p>
+										</a>
+									</li>
+									<li>
+										<a href="f0.html">
+											<h3>NIGHT AURORA的一个新网站</h3>
+											<p>THE FIRST BLOGS BELONG TO NIGHT AURORA .</p>
+										</a>
+									</li>
+									<li>
+										<a href="clause.html">
+											<p>使用本站前必读</p>
+										</a>
+										<a href="personal infor.html">
+											<p>关于我</p>
+										</a>
+									</li>
+									
+									<!--
+									<li>
+										<a href="#">
+											<h3>Etiam sed consequat</h3>
+											<p>Porta lectus amet ultricies</p>
+										</a>
+									</li>
+									-->
+									<!--模板样式，右侧框-->
+									
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<!--
+                                                        <section>
+								<ul class="actions stacked">
+									<li><a href="#" class="button large fit">Log In</a></li>
+								</ul>
+							</section>
+                                                        -->
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><p><sub>Unity游戏开发 & C#</sub></p>unity开发中问题的记录及解决方法 Part1</h2>
+										<p>Documentation, solutions to problems in unity development</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2023-04-05">2023.04.05</time>
+										<a href="personal infor.html" class="author"><span class="">&nbsp;Night Aurora&nbsp;</span><img src="images/01405040.jpg" alt="" /></a>
+									</div>
+								</header>
+
+								<h2>Hi,这里是Night Aurora。以下内容可能不一定准确，各位就随便看看，欢迎指正~</h2>
+
+								<h3>1.关于切换场景中会出现的问题</h3>
+								<blockquote>
+									在从一个场景切换到另一个场景时，如果两个场景的光源参数不相同，在切换场景后可能就会出现3D物体变黑或无法达到预期效果的情况<br>
+									<h4>解决方法</h4>
+									1.使用<code>LightProbes.Tetrahedralize();</code><br>
+									2.有A、B两场景，如果需要保持使用A场景中的灯光，且从A切换到B，复制A中的灯光，粘贴到B场景中就可以了。(说简单点就是保证所有场景的灯光相同就可以了)
+								</blockquote>
+
+								<h3>2.关于测试包在手机运行时在熄屏后再次亮屏，所产生的卡屏、黑屏原因分析</h3>
+								<blockquote>
+									1.原因：卡出去的原因是因为游戏设置了“FLAG_SHOW_WHEN_LOCKED”，即游戏显示高于锁屏；<br>
+										（参考来源：https://gwb.tencent.com/community/detail/132944）<br>
+									2.目前所了解的：<br>
+										其本质和音乐软件的熄屏展示原理相同<br>
+										（“https://blog.csdn.net/weixin_34766991/article/details/117520038?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-117520038-blog-115527476.pc_relevant_recovery_v2&spm=1001.2101.3001.4242.1&utm_relevant_index=3”）<br>
+										因此只需要编写程序的全局配置表，即“AndroidMainfest.xml”<br>
+										(https://blog.csdn.net/u014589770/article/details/107203977)<br>
+										第一种方法（X）：更改unity打包的基本配置文件，但是在2021.3以及之后的版本中好像不存在（https://blog.csdn.net/linxinfa/article/details/102622454）<br>
+										第二种方法：将其打包成工程文件，交给Android Studio来更改Xml文件<br>
+									3.解决方法：目前还没解决
+								</blockquote>
+
+								<h3>3.关于SetAction()方法会带来的某些问题</h3>
+								<blockquote>
+									一个GameObject在第一次使用<code>SetAction(true)</code>后，所搭载的脚本中的start()可以正常运行第一次（仅一次）。<br>
+									但请注意，在使用了<code>SetAction(false)</code>之后再次以相同的方法激活同一个GameObject，就会出现start()不运行。<br>
+									原因：因为在场景中此物体已经使用过一次<code>Start()</code>方法，所以才会导致此种情况
+								</blockquote>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<!--
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							-->
+						</ul>
+						<a href="mailto:ysz051009@outlook.com" class="icon solid fa-envelope"><span class="label">Email</span></a>
+						<p class="copyright"><a href="clause.html">&copy;  2022-2023 NIGHT AURORA </a></p>
+						<!-- <p class="copyright">Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

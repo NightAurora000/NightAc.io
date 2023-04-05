@@ -110,9 +110,34 @@
 
 				<!-- Main -->
 			  <div id="main">
-				  		<!-- Second Post -->
+
 				  		<article class="post">
-				  			<header>
+					  <header>
+						  <div class="title">
+							  <h2><p><sub>Unity游戏开发 & C#</sub></p><a href="f1.html">unity开发中问题的记录及解决方法 Part1</a></h2>
+							  <p>Documentation, solutions to problems in unity development</p>
+						  </div>
+						  <div class="meta">
+							  <time class="published" datetime="2023-04-05">2023.04.05</time>
+							  <a href="personal infor.html" class="author"><span class="">&nbsp;Night Aurora&nbsp;</span><img src="images/01405040.jpg" alt="" /></a>
+						  </div>
+					  </header>
+					  <h3>这里会记录一些关于平常unity游戏开发时会遇到的问题以及解决方案呦~</h3>
+					  <p>
+						  1.关于切换场景中会出现的问题<br>
+						  2.关于测试包在手机运行时在熄屏后再次亮屏，所产生的卡屏、黑屏原因分析<br>
+						  3.关于<code>SetAction()</code>方法会带来的某些问题
+					  </p>
+					  <footer>
+						  <ul class="actions">
+							  <li><a href="f2.html" class="button large" >继续阅读</a></li>
+						  </ul>
+					  </footer>
+				  </article>
+
+
+				  		<article class="post">
+							<header>
 								<div class="title">
 									<h2><p><sub>实验艺术&视觉传媒类</sub></p><a href="f1.html">小众又好玩的网站分享</a></h2>
 									<p>Experimental art & visual media sharing website</p>
@@ -171,17 +196,21 @@
 									<font color="#f2f2f2">
 										<h2><font color="#f2f2f2">spring</font></h2>
 										
-										<p>2023新的一年，继续加油~</p><!--一个分享有趣的东西的地方(啥都分享)-->
+										<p>R.I.P 坂本龙一教授</p><!--一个分享有趣的东西的地方(啥都分享)-->
+										<p>一路走好，教授<br>
+											“真实地活下去，不要忘记每天看月亮”<br>
+											Ars longa, vita brevis.<br>
+											艺术千秋，人生朝露。<br>
+											1952.1.17-2023.3.28
+										</p>
+										<br>
 										<p>#更多功能正在完善中,敬请期待#</p>
 										<p><div id="current_date"/></p>
-                                        
 										<script>
                                         date = new Date();
                                         year = date.getFullYear();
                                         month = date.getMonth() + 1;
                                         day = date.getDate();
-										hour = date.getHours();
-										min = date.getMinutes();
                                         document.getElementById("current_date").innerHTML = year + "-" + month + "-" + day;
                                         </script>
 										
@@ -237,22 +266,7 @@
 					  </section>
 
 						<!-- Posts List -->
-							<section>
-								<h1>当前时间</h1>
-								<h3><font color="#737373"><div id="current_hm.class_name"><div id="current_hm"/></div></font></h3>
-								<script>
-                                  date = new Date();
-                                  hour = date.getHours();
-                                  min = date.getMinutes();
-                                  document.getElementById("current_hm").innerHTML = hour + ":" + min;
-                                  $(function () {
-                                      setInterval(function () {
-                                          $(".class_name").load(location.href + " .class_name");
-                                      }, 100);
-                                  })
-
-
-                                </script>
+							<section>	
 								
 								<ul class="posts">
 									<!--
