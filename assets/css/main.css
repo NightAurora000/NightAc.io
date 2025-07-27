@@ -112,7 +112,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: linear-gradient(#4AC29A, #BDFFF3);
+		background: linear-gradient(#f88f3c, #d2e6e8);/*（基础色）#4AC29A, #BDFFF3*/
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
